@@ -37,10 +37,10 @@ fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=621e41e2de6742e19
 
      
         cards.innerHTML = `
-        <div>
+        <div class="inside-div">
         <h1 class="text-style1">BREAKFAST</h1>
         <div class="extracard setBreakfast">
-            <img src="${url1}" alt="">
+            <img src="${url1}" alt="" class="myimg">
             <div class="extracard-info">
                 <h3 class="break-fasth3">${name1}</h3>
                 <section class="breakfase-section">Calorie : ${calory1}</section>
@@ -48,10 +48,10 @@ fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=621e41e2de6742e19
             </div>
         </div>
     </div>
-    <div>
+    <div class="inside-div">
         <h1 class="text-style1">LUNCH</h1>
         <div class="extracard">
-            <img src="${url2}" alt="" >
+            <img src="${url2}" alt="" class="myimg">
             <div class="extracard-info">
                 <h3 class="break-fasth3">${name2}</h3>
                 <section class="breakfase-section">Calorie : ${calory2}</section>            
@@ -59,10 +59,10 @@ fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=621e41e2de6742e19
             </div>
         </div>
     </div>
-    <div>
+    <div class="inside-div">
         <h1 class="text-style1">DINNER</h1>
         <div class="extracard">
-            <img src="${url3}" alt="">
+            <img src="${url3}" alt="" class="myimg">
             <div class="extracard-info">
                 <h3 class="break-fasth3">${name3}</h3>
                 <section class="breakfase-section">Calorie : ${calory3}</section>
@@ -224,21 +224,21 @@ function mealFun() {
             
             
             cards.innerHTML = `
-            <div>
+            <div class="inside-div">
             <h1 class="text-style1">BREAKFAST</h1>
             <div class="extracard setBreakfast">
-                <img src="${url1}" alt="">
-                <div class="extracard-info">
+                <img src="${url1}" alt="" class="myimg">
+                <div class="extracard-info" >
                     <h3 class="break-fasth3">${name1}</h3>
                     <section class="breakfase-section">Calorie : ${calory1}</section>
                     <button class="btn" type="button" onclick= myFun(${id4})>GET RECIPE</button>
                 </div>
             </div>
         </div>
-        <div>
+        <div class="inside-div">
             <h1 class="text-style1">LUNCH</h1>
             <div class="extracard">
-                <img src="${url2}" alt="">
+                <img src="${url2}" alt="" class="myimg">
                 <div class="extracard-info">
                     <h3 class="break-fasth3">${name2}</h3>
                     <section class="breakfase-section">Calorie : ${calory2}</section>            
@@ -246,10 +246,10 @@ function mealFun() {
                 </div>
             </div>
         </div>
-        <div>
+        <div class="inside-div">
             <h1 class="text-style1">DINNER</h1>
             <div class="extracard">
-                <img src="${url3}" alt="">
+                <img src="${url3}" alt="" class="myimg">
                 <div class="extracard-info">
                     <h3 class="break-fasth3">${name3}</h3>
                     <section class="breakfase-section">Calorie : ${calory3}</section>

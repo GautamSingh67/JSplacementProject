@@ -2,6 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -14,6 +15,7 @@ main {
     margin: 1px;
     border: 5px solid #faf7f7;
     box-shadow: inset 0px -2px 5px 5px rgb(194 190 190 / 37%);
+    overflow-x: hidden;
 }
 
 .navclass {
@@ -165,11 +167,19 @@ main {
     border-color: #c6b4b4;
     background-color: rgb(53 41 36);
     cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
+    width: 45%;
+    padding: 0.2rem;
+    border-radius: 12px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.btn:active {
+    transform: translatey(3px);
+}
+.btn:hover {
+    background-color: rgb(11, 7, 5);
+}
+
 
 @media (max-width: 600px) {
     .inputtype1,
@@ -192,7 +202,7 @@ main {
     }
     .extracard {
         /* border: 1px solid black; */
-        height: 50vh;
+        height: 58vh;
         width: 60vw;
         display: flex;
         justify-content: center;
@@ -293,7 +303,7 @@ td {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:529px) {
     .recipetablemaindiv {
         margin-top: -60px;
     }
@@ -309,6 +319,33 @@ td {
         margin-left: 10px;
     }
     .recipetablemaindiv {
-        width: 85%;
+     width: 89%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .inside-div {
+        height: 80.5vh;
+        margin-bottom: 2.5rem;
+    }
+    .extracard{
+        height: 70vh;
+    }
+    .myimg{
+        height: 67%
     }
 }
+
+/* @media (max-width: 529) {
+    .inside-div {
+        height: 80.5vh;
+    }
+    .extracard{
+        height: 70vh;
+    }
+    .myimg{
+        height: 67%
+    }
+
+} */
