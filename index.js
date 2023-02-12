@@ -9,10 +9,10 @@ const RecipeContainer = document.querySelector("#recipeSection");
 const equipmentContainer = document.querySelector("#equipmentSection");
 const stepContainer = document.querySelector("#stepSection");
 let calory, bmr;
+const myKey = "621e41e2de6742e19d67e9e82f67deba";
 
 
-
-fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=dfa76644eeb6444bb9990d8d5f059e2f&timeFrame=day`)
+fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${myKey}&timeFrame=day`)
     .then((responce) =>
         responce.json())
     .then((data) => {
@@ -83,7 +83,7 @@ function myFun(id){
     headerRow.appendChild(ingredientHeader);
     table.appendChild(headerRow);
     RecipeContainer.appendChild(table);
-    fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=dfa76644eeb6444bb9990d8d5f059e2f`)
+    fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${myKey}`)
     .then((responce)=>responce.json())
     .then((res)=>{
             res.extendedIngredients.forEach((element) => {
@@ -107,7 +107,7 @@ function myFun(id){
          table.appendChild(headerRow);
          stepContainer.appendChild(table);
                              
-         fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=dfa76644eeb6444bb9990d8d5f059e2f`)
+         fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${myKey}`)
          .then((responce)=>responce.json())
         .then((res)=>{
 
@@ -133,7 +133,7 @@ function equipment(id){
     table.appendChild(headerRow);
     equipmentContainer.appendChild(table);
                         
-    fetch(`https://api.spoonacular.com/recipes/${id}/equipmentWidget.json?apiKey=dfa76644eeb6444bb9990d8d5f059e2f`)
+    fetch(`https://api.spoonacular.com/recipes/${id}/equipmentWidget.json?apiKey=${myKey}`)
     .then((responce)=>responce.json())
    .then((res)=>{
            res.equipment.forEach((element) => {
@@ -192,7 +192,7 @@ generateBtn.addEventListener("click", () => {
     } else {
         alert("Select gender");
     }
-    console.log(calory);
+ //   console.log(calory);
 
     mealFun();
 
@@ -201,7 +201,7 @@ generateBtn.addEventListener("click", () => {
 function mealFun() {
 
     
-    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=dfa76644eeb6444bb9990d8d5f059e2f&timeFrame=day&targetCalories=${calory}`)
+    fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${myKey}&timeFrame=day&targetCalories=${calory}`)
         .then((responce) =>
             responce.json())
         .then((data) => {
